@@ -4,20 +4,6 @@ namespace Trial
 {
     class Program
     {
- /*       static string Coder(string a, int s)
-        {
-            a = a.ToUpper();
-            string a2 = "";
-            foreach (char i in a)
-            {
-                if (i == ' ') { a2 += " "; }
-                else if (90 - i - s < 0) { a2 += (Char)(-26 + int.Parse(i.ToString()) + s); }
-                else if (i + s < 65) { a2 += (Char)(26 + int.Parse(i.ToString()) + s); }
-                else { a2 += (Char)(i + s); }
-            }
-            return a2;
-        }
- */
         static string Coder(string a, int s)
         {
             string a2 = "";
