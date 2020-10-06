@@ -21,9 +21,30 @@ namespace Trial
         {
             return Coder(a, -s);
         }
+        static string Vingere(string a, string key)
+        {
+            string OrigKey = key;
+            int y = 0;
+            for (int i = 0; a.Length != key.Length; i++)
+            {
+                if (a[key.Length] == ' ') { key += " ";
+                    Console.WriteLine("hi");
+                    y += 1;
+                }
+                else { key += OrigKey[(i-y)%3]; }
+            }
+            int n = 0;
+            foreach (char t in a)
+            {
+                Console.WriteLine(Coder(Char.ToString(t),(char) key[n]-65));
+                n += 1;
+            }
+            return "done";
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine(DeCoder(Coder("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 3),3));
+            //Console.WriteLine(DeCoder(Coder("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 3),3));
+            Console.WriteLine(Vingere("MATHS IS FUN", "KEY"));
         }
     }
 }
